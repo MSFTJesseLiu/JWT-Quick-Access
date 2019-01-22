@@ -29,7 +29,9 @@ app.get('/', async function (req, res) {
             let jwt = request['_headers'][headerName];
             await res.send(jwt);
             await browser.close();
-            return;
+        }
+        else{
+            await res.status(400).send('Cannot find the request from provided xhr-url-keyword');
         }
     });
 });
@@ -37,6 +39,4 @@ app.listen(port, function () {
     console.log(`JWT Quick Access listening on port ${port}!`);
 });
 
-// $env:PORT="8000"; $env:WEB_PAGE_URL="https://attract.talent.dev.dynamics.com/jobs"; npm start
 // nodejs version: 7
-// https://www.chromium.org/developers/creating-and-using-profiles
