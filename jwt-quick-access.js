@@ -30,9 +30,6 @@ app.get('/', async function (req, res) {
             await res.send(jwt);
             await browser.close();
         }
-        else{
-            await res.status(400).send('Cannot find the request from provided xhr-url-keyword');
-        }
     });
 });
 app.listen(port, function () {
