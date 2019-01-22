@@ -1,0 +1,16 @@
+{
+  "name": "jwt-quick-access",
+  "version": "1.0.0",
+  "description": "Quick access to the JSON Web Token that used in web app.",
+  "main": "jwt-quick-access.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node jwt-quick-access.js"
+  },
+  "author": "Jesse.Liu@microsoft.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "puppeteer": "^1.11.0"
+  }
+}
