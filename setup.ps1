@@ -16,6 +16,3 @@ $Shortcut.TargetPath = "C:/Program Files (x86)/Google/Chrome/Application/chrome.
 $Shortcut.Arguments = "--user-data-dir=$($dirpath)"
 $Shortcut.Save()
 Invoke-Item -Path $shortcutpath 
-
-#  .\setup.ps1 -dirpath C:\chrome-dev-profile
-#  check chrome://version/  Profile Path

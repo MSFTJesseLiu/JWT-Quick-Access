@@ -38,5 +38,3 @@ app.get('/', async function (req, res) {
 app.listen(port, function () {
     console.log(`JWT Quick Access listening on port ${port}!`);
 });
-
-// nodejs version: 7
