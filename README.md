@@ -30,6 +30,7 @@ pm.globals.set("Jwt", jwt);
 
 Just like this:
 ![alt text](tests-panel.PNG)
+![alt text2](example-request.PNG)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, you need to signed in manually, but it's a one time setup.
 
