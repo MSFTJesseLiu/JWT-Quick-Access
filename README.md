@@ -17,12 +17,14 @@ However, this short live JWT token will be expired soon, and what I found super 
 6. After running this script, you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, checked that the Profile Path is what you specified or the default value in the previous step.
 7. Then run the local node app by ``npm start`` (default``port=8000`` and default ``ChromeUserDataDirPath=C:/chrome-jwt-profile/``). Again you can customize your own port and previous user data directory path by ``$env:PORT="8000"; $env:CHROME_USER_DATA_DIR_PATH="C:/chrome-jwt-profile/"; npm start``.
 8. Use your Postman, setup a ``GET`` request to ``localhost:8000``.
-![alt text](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/WS-randomPmTest.png)
 With Test Script:
 ```js
 var jwt = responseBody;
 pm.globals.set("Jwt", jwt);
 ```
+Test Script Panel is here:
+![alt text](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/WS-randomPmTest.png)
+
 With headers as following example:
 
 | Header                    | Value                                         |
