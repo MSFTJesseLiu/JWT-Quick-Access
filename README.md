@@ -32,7 +32,7 @@ Just like this:
 ![alt text](tests-panel.PNG)
 ![alt text2](example-request.PNG)
 
-- Send the ``GET`` request to your request to ``localhost:8000``, you need to signed in manually, but it's a one time setup.
+- Send the ``GET`` request to your request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually, but it's a one time setup.
 
 - Your Postman now have a global variable ``{{Jwt}}``, the refreshed JWT token, and from now on everytime you get a 401, just send the GET request to your local running node app to refresh your ``{{Jwt}}`` with one click without copy and paste.
 
