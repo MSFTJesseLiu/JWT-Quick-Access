@@ -8,7 +8,7 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 
 **However, this short live JWT token will be expired soon, which I think is super annoying, while commenting out the [Authorization] attribute in the code is not a good way and also some operation need you to be authenticated. So recently I wrote this tiny project to have all the above steps done programmatically in one click, no copy and paste any more.**
 
-### 5 Mins Ready Setup Steps 
+### 5 Mins Setup Steps 
 - Have Chrome installed in ``C:\Program Files (x86)\Google\Chrome\Application\chrome.exe``, which is the default path.
 - Node.js version: 7 or above (not super sure, the later the better), my node.js version 8 works.
 - ``npm`` package manager to install the dependencies for you. 
