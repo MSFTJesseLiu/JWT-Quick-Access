@@ -16,22 +16,21 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 - Run the ``./setup.ps1``, this script will create a separated Chrome user data directory (default: ``C:\chrome-jwt-profile``) and an associated Chrome shortcut (default: ``Chrome JWT.lnk``) for you. You can customized your user data directory path and shortcut name by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``.
 - After running this script, you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, checked that the Profile Path is what you specified or the default value in the previous step.
 - Then run the local node app by ``npm start`` (default``port=8000`` and default ``ChromeUserDataDirPath=C:/chrome-jwt-profile/``). Again you can customize your own port and previous user data directory path by ``$env:PORT="8000"; $env:CHROME_USER_DATA_DIR_PATH="C:/chrome-jwt-profile/"; npm start``.
-- Use your Postman, create a ``GET`` request to ``localhost:8000``.
-With Test Script:
+- Use your Postman, create a ``GET`` request to ``localhost:8000``. With following Tests script and headers:
 ```js
 var jwt = responseBody;
 pm.globals.set("Jwt", jwt);
 ```
-Test Script Panel is here:
-![alt text](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/WS-randomPmTest.png)
-
-With headers as following example:
 
 | Header                    | Value                                         |
 |:-------------------------:|:---------------------------------------------:|
 | web-page-url              |  https://attract.talent.dev.dynamics.com/jobs |
 | xhr-url-keyword           |  flights                                      |
 | header-name (Optional)    |  Authorizationn                               |
+
+Just like this:
+![alt text](test-panel.PNG)
+![alt text2](example-request.PNG)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, you need to signed in manually, but it's a one time setup.
 
