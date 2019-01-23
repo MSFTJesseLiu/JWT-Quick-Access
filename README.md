@@ -35,7 +35,7 @@ With headers as following example:
 
 The xhr-xhr-url-keyword is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).
 
-- In your usual Postman request, you can access the JWT Token with ``{{Jwt}}``, everytime you get a 401, just send the previous GET request to your local running node app.
+- In your usual Postman request, you can access the JWT Token with ``{{Jwt}}``, and from now on everytime you get a 401, just send the GET request to your local running node app.
 
 ### How it works with Chrome and Postman
 - Since we perhaps already signed in to the Talent App in our default browser session with existing cookies or whatever, I was thinking to open a new tab with Talent app URL in the same session using Puppetee or Selenium these kind of web automation framwork, so I can access the XHR requests sent our from my signed-in Talent app.
