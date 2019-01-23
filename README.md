@@ -13,7 +13,7 @@ However, this short live JWT token will be expired soon, and what I found super 
 2. Node.js version: 7 or above (not super sure, the later the better), my node.js version 8 works.
 3. ``npm`` package manager to install the dependencies for you. 
 4. Clone this repo, and do ``npm install``
-5. Run the ``./setup.ps1``, this script will create a separated Chrome user data directory (default: ``C:\chrome-jwt-profile``) and an associated Chrome shortcut (default: ``Chrome JWT.lnk``) for you. You can customized your user data directory path and shortcut name by ex:``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``.
+5. Run the ``./setup.ps1``, this script will create a separated Chrome user data directory (default: ``C:\chrome-jwt-profile``) and an associated Chrome shortcut (default: ``Chrome JWT.lnk``) for you. You can customized your user data directory path and shortcut name by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``.
 6. After running this script, you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, checked that the Profile Path is what you specified or the default value in the previous step.
 7. Then run the local node app by ``npm start`` (default``port=8000`` and default ``ChromeUserDataDirPath=C:/chrome-jwt-profile/``). Again you can customize your own port and previous user data directory path by ``$env:PORT="8000"; $env:CHROME_USER_DATA_DIR_PATH="C:/chrome-jwt-profile/"; npm start``.
 8. Use your Postman, setup a ``GET`` request to ``localhost:8000``.
