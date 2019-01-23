@@ -33,7 +33,9 @@ With headers as following example:
 | xhr-url-keyword           |  flights                                      |
 | header-name (Optional)    |  Authorizationn                               |
 
-- After sending the previous GET request, your Postman now have a global variable ``{{Jwt}}`` with the refreshed JWT token, and from now on everytime you get a 401, just send the GET request to your local running node app to refresh your ``{{Jwt}}``.
+- Send the ``GET`` request to your request to ``localhost:8000``, you need to signed in manually, but it's a one time setup.
+
+- Your Postman now have a global variable ``{{Jwt}}`` with the refreshed JWT token, and from now on everytime you get a 401, just send the GET request to your local running node app to refresh your ``{{Jwt}}`` with one click with no copy and paste.
 
 
 <sup>The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).</sup>
