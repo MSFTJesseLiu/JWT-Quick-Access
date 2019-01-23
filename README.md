@@ -6,7 +6,7 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 3. Look at the XHRs in the networks panel, find out the request that contains Authorization header with JWT token
 4. Copy that JWT token and paste it to my Postman request header
 
-However, this short live JWT token will be expired soon, and what I found super annoying was I have to go through the above steps to get a new token. So recently I wrote this tiny project to have all the above step done programmatically in one click.
+However, this short live JWT token will be expired soon, and what I found super annoying was I have to go through the above steps to get a new token. So recently I wrote this tiny project to have all the above steps done programmatically in one click.
 
 ### 5 Mins Ready to Go Steps 
 1. Have Chrome installed in ``C:\Program Files (x86)\Google\Chrome\Application\chrome.exe``, which is the default path.
