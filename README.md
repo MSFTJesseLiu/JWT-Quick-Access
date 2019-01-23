@@ -33,7 +33,7 @@ With headers as following example:
 | xhr-url-keyword           |  flights                                      |
 | header-name (Optional)    |  Authorizationn                               |
 
-The xhr-xhr-url-keyword is the keyword in the XHR request uyl sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).
+The xhr-xhr-url-keyword is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).
 
 - In your usual Postman request, you can access the JWT Token with ``{{Jwt}}``, everytime you get a 401, just send the previous GET request to your local running node app.
 
