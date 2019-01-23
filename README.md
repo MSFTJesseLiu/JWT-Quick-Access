@@ -22,8 +22,6 @@ With Test Script:
 var jwt = responseBody;
 pm.globals.set("Jwt", jwt);
 ```
-Test Script Panel is here:
-![alt text](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/WS-randomPmTest.png)
 
 With headers as following example:
 
@@ -32,6 +30,10 @@ With headers as following example:
 | web-page-url              |  https://attract.talent.dev.dynamics.com/jobs |
 | xhr-url-keyword           |  flights                                      |
 | header-name (Optional)    |  Authorizationn                               |
+
+Like this:
+![alt text](test-panel.PNG)
+![alt text2](example-request.PNG)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, you need to signed in manually, but it's a one time setup.
 
