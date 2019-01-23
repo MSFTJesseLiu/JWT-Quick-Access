@@ -1,10 +1,10 @@
 # JWT Quick Access
 ### Motivation
 As working from the backend in D365 Talent, everytime when I need to test my endpoint from Postman, I probably have to include the Authorization header with JWT token that I get it from 
-1. Going to a Talent App
-2. Suddenly open the DevTools in chrome
-3. Look at the XHRs in the networks panel, find out the request that contains Authorization header with JWT token
-4. Copy that JWT token and paste it to my Postman request header
+- Going to a Talent App
+- Suddenly open the DevTools in chrome
+- Look at the XHRs in the networks panel, find out the request that contains Authorization header with JWT token
+- Copy that JWT token and paste it to my Postman request header
 
 However, this short live JWT token will be expired soon, and what I found super annoying was I have to go through the above steps to get a new token. So recently I wrote this tiny project to have all the above steps done programmatically in one click.
 
