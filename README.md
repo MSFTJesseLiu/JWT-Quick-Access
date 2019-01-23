@@ -23,6 +23,7 @@ var jwt = responseBody;
 pm.globals.set("Jwt", jwt);
 ```
 With headers as following example:
+
 | Header                    | Value                                         |
 |:-------------------------:|:---------------------------------------------:|
 | web-page-url              |  https://attract.talent.dev.dynamics.com/jobs |
