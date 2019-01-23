@@ -29,8 +29,7 @@ pm.globals.set("Jwt", jwt);
 | header-name (Optional)    |  Authorizationn                               |
 
 Just like this:
-![alt text](test-panel.PNG)
-![alt text2](example-request.PNG)
+![alt text](tests-panel.PNG)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, you need to signed in manually, but it's a one time setup.
 
