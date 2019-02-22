@@ -10,8 +10,8 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 
 ### 5 Mins Setup Steps 
 - Have Chrome installed in ``C:\Program Files (x86)\Google\Chrome\Application\chrome.exe``, which is the default path.
-- Node.js version: 7 or above (not super sure, the later the better), my node.js version 8 works.
-- ``npm`` package manager to install the dependencies for you. 
+- Node.js version 7 or above (not super sure, the later the better), my node.js version 8 works.
+- Have ``npm`` package manager to install the dependencies for you. 
 - Clone this repo, and do ``npm install``
 - Run the ``./setup.ps1``, this script will create a separated Chrome user data directory (default: ``C:\chrome-jwt-profile``) and an associated Chrome shortcut (default: ``Chrome JWT.lnk``) for you. You can customized your user data directory path and shortcut name by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``.
 - After running this script, you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, checked that the Profile Path is what you specified or the default value in the previous step.
@@ -34,7 +34,7 @@ Just like this:
 
 - Send the ``GET`` request to your request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually, but it's a one time setup.
 
-- Your Postman now have a global variable ``{{Jwt}}``, the refreshed JWT token, and from now on everytime you get a 401, just send the GET request to your local running node app to refresh your ``{{Jwt}}`` with one click without copy and paste.
+- Your Postman now have a global variable ``{{Jwt}}``, the refreshed JWT token, and from now on everytime you get a 401, just send the ``GET`` request to your local running node app to refresh your ``{{Jwt}}`` with one click without copy and paste.
 
 
 <sup>The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).</sup>
