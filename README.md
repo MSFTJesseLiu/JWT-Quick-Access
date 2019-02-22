@@ -41,7 +41,7 @@ Just like this:
 
 
 ### (Nitty-gritty) How it works with Chrome and Postman 
-- Since we perhaps already signed in to the Talent App in our default browser session with existing cookies or whatever, I was thinking to open a new tab with Talent app URL in the same session using Puppetee or Selenium these kind of web automation framwork, so I can access the XHR requests sent our from my signed-in Talent app.
+- Since we perhaps already signed in to the Talent App in our default browser session with existing cookies or whatever, I was thinking to open a new tab with Talent app URL in the same session using Puppetee or Selenium these kinds of web automation framwork, so I can access the XHR requests sent out from my signed-in Talent app.
 
 - However, in order to launch a browser in any web automation framwork, you cannot have your default browser session opening, since it will need WRITE access to our default Chrome user data directory ``C:\Users\jel\AppData\Local\Google\Chrome\User Data\``, but that WRITE permission has been occupied by our running browser.
 
