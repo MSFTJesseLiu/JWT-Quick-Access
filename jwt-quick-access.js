@@ -25,7 +25,7 @@ app.get('/', async function (req, res) {
     const page = await browser.newPage();
     await page.goto(webPageUrl);
     await page.on('request', async request => {
-        if (request['_url'].indexOf(xhrUrlKeyword) > -1){
+        if (request['_url'].indexOf(xhrUrlKeyword) > -1 && request['_headers'][headerName] != undefined){
             let jwt = request['_headers'][headerName];
             await res.send(jwt);
             await browser.close();
