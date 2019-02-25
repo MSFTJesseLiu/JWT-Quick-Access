@@ -26,7 +26,7 @@ pm.globals.set("Jwt", jwt);
 |:-------------------------:|:---------------------------------------------:|
 | web-page-url              |  https://attract.talent.dev.dynamics.com/jobs |
 | xhr-url-keyword           |  flights                                      |
-| header-name (Optional)    |  Authorization                               |
+| header-name (Optional)    |  authorization                               |
 
 Just like this:
 ![alt text](tests-panel.PNG)
