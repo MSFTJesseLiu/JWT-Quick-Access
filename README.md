@@ -21,7 +21,7 @@ pm.globals.set("DevJwt", jwt);
 | header-name (Optional)    |  authorization                                |
 
 Just like this:
-![alt text](tests-panel.jpg)
+![alt text](test-panel.jpg)
 ![alt text2](headers.jpg)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually, but it's a one time setup.
