@@ -30,7 +30,7 @@ Just like this:
 ![alt text](tests-panel.jpg)
 ![alt text2](headers.jpg)
 
-- Send the ``GET`` request to your request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually, but it's a one time setup.
+- Send the ``GET`` request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually for the first time.
 
 - For PROD JWT, just duplicate another request for PROD, With following Tests script and headers, so that you get another global variable ``{{ProdJwt}}``.
 ```js
