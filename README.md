@@ -11,23 +11,45 @@
 - Use your Postman, create a ``GET`` request to ``localhost:8000``. With following Tests script and headers:
 ```js
 var jwt = responseBody;
-pm.globals.set("Jwt", jwt);
+pm.globals.set("DevJwt", jwt);
 ```
 
 | Header                    | Value                                         |
 |:-------------------------:|:---------------------------------------------:|
 | web-page-url              |  https://attract.talent.dev.dynamics.com/jobs |
 | xhr-url-keyword           |  flights                                      |
-| header-name (Optional)    |  authorization                               |
+| header-name (Optional)    |  authorization                                |
 
 Just like this:
 ![alt text](tests-panel.PNG)
-![alt text2](example-request.PNG)
+![alt text2](headers.PNG)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually, but it's a one time setup.
 
-- Your Postman now have a global variable ``{{Jwt}}``, the refreshed JWT token, and from now on everytime you get a 401, just send the ``GET`` request to your local running node app to refresh your ``{{Jwt}}`` with one click without copy and paste.
+- For PROD JWT, just duplicate another request for PROD, With following Tests script and headers, so that you get another global variable ``{{ProdJwt}}``.
+```js
+var jwt = responseBody;
+pm.globals.set("ProdJwt", jwt);
+```
 
+| Header                    | Value                                         |
+|:-------------------------:|:---------------------------------------------:|
+| web-page-url              |  https://attract.talent.dynamics.com/jobs     |
+| xhr-url-keyword           |  flights                                      |
+| header-name (Optional)    |  authorization                                |
+
+- Your Postman now have 2 global variables ``{{DevJwt}}`` and ``{{ProdJwt}}``, so you can send request to our DEV Talent endpoints like below:
+![alt text3](example-request.PNG)
+
+- From now on everytime you get a 401, just send the ``GET`` request to your local running node app to refresh your ``{{DevJwt}}`` or ``{{ProdJwt}}`` with one click without copy and paste.
+
+
+#### Auto-Run on Windows Start up
+- Stop the running local node app.
+- ``npm install -g node-windows``
+- ``npm install -g qckwinsvc``
+- ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
+- To unplug, ``qckwinsvc --uninstall --name "JwtQuickAccess" --script ".\jwt-quick-access.js"``
 
 <sup>The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).</sup>
 
