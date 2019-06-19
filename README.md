@@ -1,12 +1,4 @@
 # JWT Quick Access
-### Motivation
-As working from the backend in D365 Talent, everytime when I need to test my endpoint from Postman, I probably have to include the Authorization header with JWT token that I get it from 
-- Going to a Talent App
-- Suddenly open the DevTools in chrome
-- Look at the XHRs in the networks panel, find out the request that contains Authorization header with JWT token
-- Copy that JWT token and paste it to my Postman request header
-
-**However, this short live JWT token will be expired soon, which I think is super annoying, while commenting out the [Authorization] attribute in the code is not a good way and also some operations require you to be authenticated. So recently I wrote this tiny project to have all the above steps done programmatically in one click, which helps me every hour, makes me stay in a good mood and no copy and paste any more.**
 
 ### 5 Mins Setup Steps 
 - Have Chrome installed in ``C:\Program Files (x86)\Google\Chrome\Application\chrome.exe``, which is the default path.
@@ -14,7 +6,7 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 - Have ``npm`` package manager to install the dependencies for you. 
 - Clone this repo, and do ``npm install``
 - Run the ``./setup.ps1``, this script will create a separated Chrome user data directory (default: ``C:\chrome-jwt-profile``) and an associated Chrome shortcut (default: ``Chrome JWT.lnk``) for you. You can customized your user data directory path and shortcut name by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``.
-- After running this script, you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, checked that the Profile Path is what you specified or the default value in the previous step.
+- After running this script, you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, checked the Profile Path is what you specified or the default value in the previous step.
 - Then run the local node app by ``npm start`` (default``port=8000`` and default ``ChromeUserDataDirPath=C:/chrome-jwt-profile/``). Again you can customize your own port and previous user data directory path by ``$env:PORT="8000"; $env:CHROME_USER_DATA_DIR_PATH="C:/chrome-jwt-profile/"; npm start``.
 - Use your Postman, create a ``GET`` request to ``localhost:8000``. With following Tests script and headers:
 ```js
@@ -39,6 +31,14 @@ Just like this:
 
 <sup>The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).</sup>
 
+### Motivation
+As working from the backend in D365 Talent, everytime when I need to test my endpoint from Postman, I probably have to include the Authorization header with JWT token that I get it from 
+- Going to a Talent App
+- Suddenly open the DevTools in chrome
+- Look at the XHRs in the networks panel, find out the request that contains Authorization header with JWT token
+- Copy that JWT token and paste it to my Postman request header
+
+**However, this short live JWT token will be expired soon, which I think is super annoying. So I wrote this tiny project to have all the above steps done programmatically in one click, which helps me every hour, no copy and paste any more.**
 
 ### (Nitty-gritty) How it works with Chrome and Postman 
 - Since we perhaps already signed in to the Talent App in our default browser session with existing cookies or whatever, I was thinking to open a new tab with Talent app URL in the same session using Puppetee or Selenium these kinds of web automation framwork, so I can access the XHR requests sent out from my signed-in Talent app.
