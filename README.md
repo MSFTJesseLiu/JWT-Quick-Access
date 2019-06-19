@@ -11,7 +11,7 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 - **Have Chrome installed** in ``C:\Program Files (x86)\Google\Chrome\Application\chrome.exe``, which is the default path.
 - **Node.js version 8+** and ``npm`` package manager. 
 - **Clone this repo, and do ``npm install``**
-- **Run the ``./setup.ps1``**, this will create a separated Chrome user data directory and an associated Chrome shortcut. You can customized it by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``. Now you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, make sure the Profile Path is what you specified or the default value ``C:\chrome-jwt-profile``.
+- **Run the ``./setup.ps1``**, this will create a separate Chrome user data directory and an associated Chrome shortcut. You can customized it by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``. Now you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, make sure the Profile Path is what you specified or the default value ``C:\chrome-jwt-profile``.
 - **Run the node script by ``npm start``**. Again you can customize it by ``$env:PORT="8000"; $env:CHROME_USER_DATA_DIR_PATH="C:/chrome-jwt-profile/"; npm start``.
 - **In Postman, create a ``GET`` request to ``localhost:8000``. With following tests script and headers:**
 ```js
@@ -29,9 +29,9 @@ Just like this:
 ![alt text](tests-panel.jpg)
 ![alt text2](headers.jpg)
 
-- **Run the ``GET`` request above, a chrome browser will be opened, you need to signed in manually for the first time.**
+- **Run the ``GET`` request above, a chrome browser will be opened, you need to sign in manually for the first time.**
 
-- For Prod token, duplicate another request for Prod, with following tests script and headers, so that you get another global variable ``{{ProdJwt}}``.
+- **For Prod token, duplicate another request for Prod, with following tests script and headers, so that you get another global variable ``{{ProdJwt}}``**.
 ```js
 var jwt = responseBody;
 pm.globals.set("ProdJwt", jwt);
