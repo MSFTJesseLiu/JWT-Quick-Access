@@ -49,11 +49,11 @@ pm.globals.set("ProdJwt", jwt);
 - **From now on everytime you get a 401, just send the ``GET`` request to your local running node app to refresh your ``{{DevJwt}}`` or ``{{ProdJwt}}`` with one click without copy and paste!**
 
 
-### Auto-Run in Background at Windows Start up
+### Auto-Run in Background at Windows Startup
 - Stop the original node app.
 - ``npm install -g node-windows``
 - ``npm install -g qckwinsvc``
-- To plug the node app on Windows start up, ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
+- To plug the node app in background, ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
 - To unplug, ``qckwinsvc --uninstall --name "JwtQuickAccess" --script ".\jwt-quick-access.js"``
 
 
