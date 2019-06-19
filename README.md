@@ -54,7 +54,7 @@ pm.globals.set("ProdJwt", jwt);
 - Stop the running local node app.
 - ``npm install -g node-windows``
 - ``npm install -g qckwinsvc``
-- ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
+- To plug the node app on Windows start up, ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
 - To unplug, ``qckwinsvc --uninstall --name "JwtQuickAccess" --script ".\jwt-quick-access.js"``
 
 <sup>The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).</sup>
