@@ -56,7 +56,6 @@ pm.globals.set("ProdJwt", jwt);
 - To plug the node app on Windows start up, ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
 - To unplug, ``qckwinsvc --uninstall --name "JwtQuickAccess" --script ".\jwt-quick-access.js"``
 
-<sup>The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).</sup>
 
 ### (Nitty-gritty) How it works with Chrome and Postman 
 - Since we perhaps already signed in to the Talent App in our default browser session with existing cookies or whatever, I was thinking to open a new tab with Talent app URL in the same session using Puppetee or Selenium these kinds of web automation framwork, so I can access the XHR requests sent out from my signed-in Talent app.
@@ -68,3 +67,5 @@ pm.globals.set("ProdJwt", jwt);
 - The next step is to let Postman have the new JWT Token that we get from our Node.js app as a **Global Variable** in Postman. Super unfortunately, Postman only have a Newman CLI for setup global variables for a fixed set of requests collection, but not for the whole Postman app. And no npm package does the thing we want. Postman has Rest API that manage your Postman workspace in sync, but that is super heavy, slow and need additional setup. Plus, we cannot either write a config file in Postman application directory, because it doesn't set up the global variable by consuming the config file. 
 
 - The only good thing is Postman can run a javascript which can set the global variable before or after a request has been sent, so I then had to make my node app as a local server that is constantly listening, and whenever we want to get a new JWT token, we sent a request to our local node app, and it will return the new JWT token in the body, so then we can setup the global variable with the Postman javascript afterwards.
+
+- The xhr-url-keyword header is the keyword in the XHR request URL sent out from the web page. So this node app is not just for Talent App, it can consume any web page and any XHR request keyword, and any header (default: ``Authorization``).
