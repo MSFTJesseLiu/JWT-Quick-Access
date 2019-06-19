@@ -3,9 +3,9 @@
 As working from the backend in D365 Talent, everytime when I need to test my endpoint from Postman, I have to include the Authorization header with JWT token that I get it from 
 - Going to a Talent App
 - Suddenly open the DevTools in chrome, look at the networks panel, find out the request that contains Authorization header with JWT token
-- Copy that JWT token and paste it to my Postman request header
+- Copy that token and paste it to my Postman request header
 
-**However, this short live JWT token will be expired soon, which I think is super annoying. So I wrote this tiny project to have all the above steps done programmatically in one click, which helps me every hour, no copy and paste any more.**
+**However, this short live JWT token will be expired soon, which I think is super annoying. So I wrote this tool to have all the above steps done programmatically in one click, which helps me every hour, no copy and paste any more.**
 
 ### 5 Mins Setup Steps 
 - Have Chrome installed in ``C:\Program Files (x86)\Google\Chrome\Application\chrome.exe``, which is the default path.
