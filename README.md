@@ -21,7 +21,7 @@ pm.globals.set("DevJwt", jwt);
 | header-name (Optional)    |  authorization                                |
 
 Just like this:
-![alt text](tests-panel.PNG)
+![alt text](tests-panel.jpg)
 ![alt text2](headers.jpg)
 
 - Send the ``GET`` request to your request to ``localhost:8000``, a chrome browser will be opened, you need to signed in manually, but it's a one time setup.
@@ -39,7 +39,7 @@ pm.globals.set("ProdJwt", jwt);
 | header-name (Optional)    |  authorization                                |
 
 - Your Postman now have 2 global variables ``{{DevJwt}}`` and ``{{ProdJwt}}``, so you can send request to our DEV Talent endpoints like below:
-![alt text3](example-request.PNG)
+![alt text3](example-request.jpg)
 
 - From now on everytime you get a 401, just send the ``GET`` request to your local running node app to refresh your ``{{DevJwt}}`` or ``{{ProdJwt}}`` with one click without copy and paste.
 
