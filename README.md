@@ -14,6 +14,10 @@ As working from the backend in D365 Talent, everytime when I need to test my end
 - **Run the ``./setup.ps1``**, this will create a separate Chrome user data directory and an associated Chrome shortcut. You can customized it by ``.\setup.ps1 -dirpath C:\chrome-jwt-profile -shortcutname Chrome JWT.lnk``. Now you will have a brand new chrome browser session opened. Go to ``chrome://version/`` in your new chrome browser, make sure the Profile Path is what you specified or the default value ``C:\chrome-jwt-profile``.
 - **Run the node script by ``npm start``**. Again you can customize it by ``$env:PORT="8000"; $env:CHROME_USER_DATA_DIR_PATH="C:/chrome-jwt-profile/"; npm start``.
 - **In Postman, create a ``GET`` request to ``localhost:8000``. With following tests script and headers:**
+![alt text](tests-panel.jpg)
+![alt text2](headers.jpg)
+
+Here for you to copy:
 ```js
 var jwt = responseBody;
 pm.globals.set("DevJwt", jwt);
@@ -25,9 +29,6 @@ pm.globals.set("DevJwt", jwt);
 | xhr-url-keyword           |  flights                                      |
 | header-name (Optional)    |  authorization                                |
 
-Just like this:
-![alt text](tests-panel.jpg)
-![alt text2](headers.jpg)
 
 - **Run the ``GET`` request above, a chrome browser will be opened, you need to sign in manually for the first time.**
 
