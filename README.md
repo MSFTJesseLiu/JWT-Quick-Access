@@ -51,7 +51,7 @@ pm.globals.set("ProdJwt", jwt);
 
 
 ### Auto-Run in Background at Windows Startup
-- Stop the original node app.
+- Make sure you already signed in to both Dev and Prod Talent website, then stop the original node script.
 - ``npm install -g node-windows``
 - ``npm install -g qckwinsvc``
 - To plug the node app in background, ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
