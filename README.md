@@ -51,11 +51,12 @@ pm.globals.set("ProdJwt", jwt);
 
 
 ### Auto-Run in Background at Windows Startup
-- Make sure you already signed in to both Dev and Prod Talent website for the first time on your new browser session, then stop the original node script.
-- ``npm install -g node-windows``
-- ``npm install -g qckwinsvc``
-- To plug the node app in background, ``qckwinsvc --name "JwtQuickAccess" --description "Jwt Quick Access" --script ".\jwt-quick-access.js" --startImmediately``
-- To unplug, ``qckwinsvc --uninstall --name "JwtQuickAccess" --script ".\jwt-quick-access.js"``
+- Stop the original node script.
+- ``npm install pm2 -g``
+- ``npm install pm2-windows-startup -g``
+- ``pm2 start .\jwt-quick-access.js``
+- ``pm2-startup install``
+- ``pm2 save``
 
 
 ## (Nitty-gritty) How it works with Chrome and Postman 
